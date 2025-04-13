@@ -1,5 +1,5 @@
 package Lutador;
-import java.lang.reflect.Constructor;
+
 public class Lutador {
 
     //Atributos:--------------------------------
@@ -22,7 +22,7 @@ public class Lutador {
         this.nacionalidade = na;
         this.idade = id;
         this.altura = al;
-        this.peso = pe;
+        this.setPeso(pe);
         this.vitoria = vi;
         this.derrota = de;
         this.empate = em;
@@ -104,19 +104,19 @@ public class Lutador {
         return categoria;
     }
 //Como a categoria vai mudar assim que colocar o peso, ficou dessa forma:
-    private void setCategoria() {
-        if (this.getPeso() < 52.2) {
-            System.out.println("Invalido");
-        }else if (this.getPeso() <= 70.3) {
-            System.out.println("Peso leve");
-        }else if (this.getPeso() <= 83.9) {
-            System.out.println("Médio");
-        }else if (this.getPeso() <= 120.2) {
-            System.out.println("Pesado");
-        }else {
-            System.out.println("Invalido");
-        }
+private void setCategoria() {
+    if (this.peso < 52.2) {
+        this.categoria = "Inválido";
+    } else if (this.peso <= 70.3) {
+        this.categoria = "Leve";
+    } else if (this.peso <= 83.9) {
+        this.categoria = "Médio";
+    } else if (this.peso <= 120.2) {
+        this.categoria = "Pesado";
+    } else {
+        this.categoria = "Inválido";
     }
+}
 //-----------------------------------------------------------
     public int getVitoria() {
         return vitoria;

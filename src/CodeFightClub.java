@@ -1,8 +1,7 @@
 import Lutador.Lutador;
-
-public class Main {
+import Lutador.Lutas;
+public class CodeFightClub {
     public static void main(String[] args) {
-
 /*EXISTE ESSA É UMA FORMA DE FAZER
 //Leves:
 Lutador l1 = new Lutador("Pretty Boy", "França", 31, 1.75, 68.9, 11, 2, 1 );
@@ -27,9 +26,12 @@ Lutador l6 = new Lutador("Nerdaard", "EUA", 30, 1.81, 105.7, 12, 2, 4); */
       l[5]  = new Lutador("Nerdaard", "EUA", 30, 1.81, 105.7, 12, 2, 4);
 //------------------------------------------------------------
 
-            l[0].status();
-            l[0].apresentar();
-//--------------------------------------------------------------
+       Lutas CFC = new Lutas();
+       CFC.marcarLuta(l[0], l[1]);
+       CFC.lutar();
+       l[0].status();
+       l[1].status();
+    //--------------------------------------------------------------
 
     }
 }
